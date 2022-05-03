@@ -58,6 +58,8 @@ public class ObtenerPokemonTest {
         //  Comprueba que ambos Pokémon coinciden (el que has obtenido mediante el nombre y el que has obtenido mediante el id).
         Pokemon pokemon25 = ObtenerPokemonRequest.Companion.get(25);
         System.out.println(pokemon25.getName());
+        Pokemon pokemon252 = ObtenerPokemonRequest.Companion.get(pokemon25.getName());
+        System.out.println(pokemon252.getId());
 
     }
 
@@ -67,6 +69,13 @@ public class ObtenerPokemonTest {
         //  Estos números deberían poder cambiar fácilmente
         int minId = 140;
         int maxId = 150;
+
+        for(int i=minId;i <= maxId;i++){
+            Pokemon pokemon25 = ObtenerPokemonRequest.Companion.get(25);
+            System.out.println(pokemon25.getName());
+            Pokemon pokemon252 = ObtenerPokemonRequest.Companion.get(pokemon25.getName());
+            System.out.println(pokemon252.getId());
+        }
 
     }
 
