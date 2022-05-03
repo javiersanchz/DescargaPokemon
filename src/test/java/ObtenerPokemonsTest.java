@@ -24,12 +24,14 @@ public class ObtenerPokemonsTest {
 
         @Test
         public void probarPokemon1A10Devuelve10Pokemon(){
-            // TODO Realiza lo mismo que el ejercicio anterior pero para un rango de Pokémons que van desde el 140 al 150.
+            // TODO Realiza lo mismo que el ejercicio anterior pero para un rango de Pokémons que van desde el 1 al 10.
             //  Estos números deberían poder cambiar fácilmente
             int minId = 1;
             int maxId = 10;
-            Pokemon[] a = ObtenerPokemonsRequest.Companion.get(140, 150);
-            System.out.println(Arrays.toString(a));
+            Pokemon[] arrayPokemon = ObtenerPokemonsRequest.Companion.get(minId, maxId);
+            //System.out.println(Arrays.toString(arrayPokemon));
+                Assertions.assertEquals(10, ObtenerPokemonsRequest.Companion.get(minId,maxId).length);
+
         }
 
         @Test
@@ -38,8 +40,8 @@ public class ObtenerPokemonsTest {
             //  Estos números deberían poder cambiar fácilmente
             int minId = 140;
             int maxId = 150;
-            Pokemon[] a = ObtenerPokemonsRequest.Companion.get(minId, maxId);
-            System.out.println(Arrays.toString(a));
+            Pokemon[] arrayPokemon = ObtenerPokemonsRequest.Companion.get(minId, maxId);
+            System.out.println(Arrays.toString(arrayPokemon));
         }
     }
 
